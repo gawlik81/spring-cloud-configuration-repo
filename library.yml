@@ -1,2 +1,44 @@
 spring:
-  test: test
+  profiles:
+    active: prodProfileAltar
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        id:
+          new_generator_mappings: false
+        format_sql: true
+        ddl-auto: none
+  datasource:
+    url: jdbc:postgresql://192.168.14.50:5432/accdb
+    username: konfacc
+    password: konfacc
+    platform: postgresql
+    initialize: true
+system:
+  external:
+    konfacc:
+      url:  https://acc-devel7-srv.altar.com.pl/axjACC/konfacc/servicesrest
+logging:
+  level:
+    ROOT: INFO
+    org.springframework: INFO
+    pl.com.altar: INFO
+    org.hibernate.SQL: INFO
+  config: classpath:logback-spring.xml
+  file: queue-offline-server
+  path: logs
+server:
+  port: 8091
+  tomcat:
+    basedir: file:.
+    accesslog:
+      directory: logs
+      enabled: true
+      file-date-format: .yyyy-MM-dd
+      pattern: common
+      prefix: access_log
+      rename-on-rotate: false
+      request-attributes-enabled: false
+      rotate: true
+      suffix: .log
