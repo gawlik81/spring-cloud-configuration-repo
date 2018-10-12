@@ -1,17 +1,3 @@
-spring:
-  jpa:
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.PostgreSQLDialect
-        id:
-          new_generator_mappings: false
-        format_sql: true
-        ddl-auto: none
-  datasource:
-    username: konfacc
-    password: konfacc
-    platform: postgresql
-    initialize: true
 logging:
   level:
     ROOT: INFO
