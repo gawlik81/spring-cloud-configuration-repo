@@ -4,7 +4,7 @@ system:
       url: 
 spring:
   datasource:
-    url:   
+    url: jdbc:postgresql://127.0.0.1:5432/accdb
     username: konfacc
     password: konfacc
     platform: postgresql
