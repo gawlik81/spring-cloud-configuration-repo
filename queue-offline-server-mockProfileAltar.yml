@@ -5,6 +5,10 @@ system:
 spring:
   datasource:
     url:   
+    username: konfacc
+    password: konfacc
+    platform: postgresql
+    initialize: false
   jpa:
     properties:
       hibernate:
@@ -13,8 +17,3 @@ spring:
           new_generator_mappings: false
         format_sql: true
         ddl-auto: none
-  datasource:
-    username: konfacc
-    password: konfacc
-    platform: postgresql
-    initialize: false
