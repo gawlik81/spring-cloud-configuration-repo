@@ -1,0 +1,9 @@
+spring:
+  profiles:
+    active: mockProfileAltar
+  datasource:
+    url:   
+system:
+  external:
+    konfacc:
+      url: 
