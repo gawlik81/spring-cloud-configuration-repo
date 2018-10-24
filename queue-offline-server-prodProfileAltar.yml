@@ -1,7 +1,7 @@
 system:
   external:
     konfacc:
-      url: https://acc-devel7-srv.altar.com.pl/adrianb-pc/konfacc/servicesrest
+      url: https://acc-devel7-srv.altar.com.pl/axjACC/konfacc/servicesrest
 spring:
   datasource:
     url: jdbc:postgresql://192.168.14.50:5432/accdb
